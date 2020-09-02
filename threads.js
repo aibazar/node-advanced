@@ -1,5 +1,5 @@
-// Decrease Threadpool size from default of 4 //
-process.env.UV_THREADPOOL_SIZE = 2;
+// Change Node Threadpool size from default of 4 //
+process.env.UV_THREADPOOL_SIZE = 5;
 
 const crypto = require('crypto');
 
