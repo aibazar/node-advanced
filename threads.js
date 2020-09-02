@@ -1,3 +1,6 @@
+// Decrease Threadpool size from default of 4 //
+process.env.UV_THREADPOOL_SIZE = 2;
+
 const crypto = require('crypto');
 
 const start = Date.now();
