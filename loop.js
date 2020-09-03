@@ -25,5 +25,9 @@ while (shouldContinue()) {
   //  - a new pendingOperation is dome //
   //  - a timer is about to complete //
 
-  // Look at pendingTimers. Call any setImmediate //
+  // 4) Look at pendingTimers. Call any setImmediate //
+
+  // 5) Handle any close events //
 }
+
+// exit back to terminal
