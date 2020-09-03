@@ -19,6 +19,9 @@ function doHash() {
   });
 }
 
+doRequest();
+
 fs.readFile('multitask.js', 'utf8', () => {
   console.log('FS:', Date.now() - start);
 });
+
