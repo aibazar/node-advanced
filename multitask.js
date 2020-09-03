@@ -1,5 +1,5 @@
 // Change Node Threadpool size from default of 4 //
-process.env.UV_THREADPOOL_SIZE = 5;
+process.env.UV_THREADPOOL_SIZE = 8;
 
 const https = require('https');
 const crypto = require('crypto');
