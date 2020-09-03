@@ -1,5 +1,6 @@
 const https = require('https');
 const crypto = require('crypto');
+const fs = require('fs');
 
 const start = Date.now();
 
