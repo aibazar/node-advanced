@@ -1,3 +1,6 @@
+// Change Node Threadpool size from default of 4 //
+process.env.UV_THREADPOOL_SIZE = 5;
+
 const https = require('https');
 const crypto = require('crypto');
 const fs = require('fs');
@@ -8,7 +11,7 @@ function doRequest() {
   https.request('https://www.google.com', res => {
     res.on('data', () => { });
     res.on('end', () => {
-      console.log(Date.now() - start);
+      console.log('Https:', Date.now() - start);
     });
   }).end();
 }
