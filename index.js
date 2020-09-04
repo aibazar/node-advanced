@@ -1,13 +1,27 @@
-
-// Im a child, im going to act like a server and do nothing else //
 const express = require('express');
 const crypto = require('crypto');
 const app = express();
+const { Worker } = require('worker_threads');
 
 app.get('/', (req, res) => {
-  crypto.pbkdf2('a', 'b', 100000, 512, 'sha512', () => {
-    res.send('Hi there');
+
+  const worker = new Worker(function () {
+    this.on('message') = function () {
+      let counter = 0;
+      while (counter < 1e9) {
+        counter++;
+      }
+
+      postMessage(counter);  // Send back to app the result from worker thread //
+    }
   });
+
+  worker.on('message') = function (myCounter) {
+    console.log(myCounter);
+  }
+
+  worker.postMessage();
+
 });
 
 app.get('/fast', (req, res) => {
