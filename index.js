@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
 
-function doWork() {
-
+function doWork(duration) {
+  const start = Date.now();
+  while (Date.now() - start < duration) { }
 }
 
 app.get('/', (req, res) => {
