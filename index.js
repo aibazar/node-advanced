@@ -6,9 +6,11 @@ const cluster = require('cluster');
 if (cluster.isMaster) {
   // Cause index.js to be executed *again* but in child mode // 
   cluster.fork();
-  // cluster.fork();
-  // cluster.fork();
-  // cluster.fork();
+  cluster.fork();
+  cluster.fork();
+  cluster.fork();
+  cluster.fork();
+  cluster.fork();
 } else {
   // Im a child, im going to act like a server and do nothing else //
   const express = require('express');
