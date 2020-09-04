@@ -8,7 +8,7 @@ function doWork(duration) {
 
 app.get('/', (req, res) => {
   doWork(5000);   // Code executed inside Node event loop //
-  res.send('Hi there');
+  res.send('Hi there!');
 });
 
 app.listen(3000);
